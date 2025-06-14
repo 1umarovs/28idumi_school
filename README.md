@@ -64,10 +64,10 @@ This is a custom **school website** developed for **School No. 28** in Andijan, 
 ![Homepage](staticfiles/for_github/screenshot(65).png)
 
 ### 📰 News & Achievements
-![News](static/images/screenshot(66).png)
+![News](staticfiles/for_github/screenshot(66).png)
 
 ### 👩‍🏫 Teacher Profiles & Comments
-![Teachers](static/images/screenshot(67).png)
+![Teachers](staticfiles/for_github/screenshot(67).png)
 
 ---
 
