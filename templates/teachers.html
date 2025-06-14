@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="banner_content text-center">
+              <h2>O'qituvchi haqida</h2>
+              <div class="page_link">
+                <a href="{% url 'main:homePage' %}">bosh sahifa</a>
+                <a href="">O'qituvchi haqida</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<div class="container py-5">
+
+  <div class="card mb-3">
+
+    <div class="row g-0">
+
+      <div class="col-md-4">
+        <img src="{{teacher.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        
+        <div class="card-body">
+          <center>
+          <h2 class="justify-content-center align-items-center p-4">{{teacher.fullname}}</h2></center>
+          <p class="card-text  p-3">{{teacher.bio}}</p>
+          <p class="card-text p-3"><small class="text-body-secondary">
+            fanlari:
+            {% for subject in teacher.subjects.all %}
+             {{subject}} ,
+            {% endfor %}
+                
+          </small></p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="row">
+    
+    {% for teacher in other_img %}
+    <div class="col-sm-12 col-md-6 col-lg-4">
+
+      <img src="{{teacher.image.url}}" class="img-fluid"  alt="">
+
+    </div>
+    {% endfor %}
+
+
+  </div>
+
+
+</div>
+
+
+{% endblock content %}

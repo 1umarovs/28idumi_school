@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<title></title>
+    <!-- ================Home Banner Area ================= -->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              {% if messages %}
+              
+              {% for message in messages %}
+              <div class="alert alert-warning alert-dismissible fade show m-auto pb-3" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {% endfor %}
+                
+            {% endif %}
+              <div class="banner_content text-center">
+                <h2>Biz bilan bog'laning</h2>
+                <div class="page_link">
+                  <a href="{% url 'main:homePage' %}">Home</a>
+                  <a href="{% url 'main:Contact' %}">Bog'lanish</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================End Home Banner Area ================= -->
+
+    <!-- ================Contact Area ================= -->
+    <section class="contact_area section_gap">
+      <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.635818994771!2d72.30235587644265!3d40.813995931364666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bc95b2dd6c5529%3A0xa69d5806e4b61d94!2sOltinko&#39;l%20tuman%2028-IDUMI!5e0!3m2!1sru!2s!4v1726819053516!5m2!1sru!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="contact_info">
+              <div class="info_item">
+                <i class="ti-home"></i>
+                <h6>Andijon shahar, O'zbekiston</h6>
+                <p>Oltinko'l tumani 28-IDUMI</p>
+              </div>
+              <div class="info_item">
+                <i class="ti-headphone"></i>
+                <h6><a href="">+998940270047</a></h6>
+                <p>Mon to Fri 9am to 6 pm</p>
+              </div>
+              <div class="info_item">
+                <i class="ti-email"></i>
+                <h6><a href="#">support@colorlib.com</a></h6>
+                <p>Send us your query anytime!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 p-3">
+            <form class="row contact_form" enctype="multipart/form-data"   method="post" id="contactForm" novalidate="novalidate">
+              {% csrf_token %}
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" name="studentName" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" required="" />
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="studentNumber" placeholder="Enter your phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your phone'" required="" />
+                </div>
+                <div class="form-group">
+                  <input type="file" class="form-control" id="name" name="studentImage" placeholder="Upload student image">
+                </div>
+              </div>
+              <div class="col-md-12 text-right">
+                <button type="submit" value="submit" class="btn primary-btn">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================Contact Area ================= -->
+
+    {% endblock  %}

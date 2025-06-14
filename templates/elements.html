@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <!-- ================Home Banner Area ================= -->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="banner_content text-center">
+                <h2>Malumotlar</h2>
+                <div class="page_link">
+                  <a href="{% url 'main:homePage' %}">Bosh sahifa</a>
+                  <a href="">Malumotlar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================End Home Banner Area ================= -->
+
+    <!-- Start Sample Area -->
+    <section class="sample-text-area">
+      <div class="container">
+        <h3 class="text-heading title_color">Bugun maktab internati hayoti</h3>
+        <p class="sample-text">
+          28-sonli Maktab-internati Oltinko'l tumani Ayronchi MFY Tolmazor qishlog'ida joylashgan. Maktab-internatining o'quv binosi 2qavatli bo'lib bugungi kunda bu o'quv muassasida 226 nafar o'quvchilar tahsil olishmoqda . Maktab-internatining 10-"A" , 10-"B" va 11-"A" , 11-"B" sinflarida jami 110 nafar o'quvchilar bo'lib shulardan 60 nafari maktab-internati yotoqxonasida yashab bilim olishadi. Maktab-internatining 6-7-8-9 sinf o'qvchilari umumta'lim maktab dasturlari asosida bilim olishadi. O'quv binosida informatika , matematika , Kimyo , Ona tili va adabiyot , fizika , geografiya , rus tili , ingliz tili , tarix , zamanoviy texnika ko'rgazmalik qurollar bilan jihozlangan . O'quvchilar uchum binoning birinchi qavatida maktab kutubxonasi joylashgan . Kutubxonada O'zbek adabiyotining yirik namoyondalari aks ettirilgan burchak mavjud . Shuningdek 110 kishiga mo'jallangan oshxona , sport o'yinlarini tashkil etish uchun mini stadion mavjud .   
+        </p>
+      </div>
+    </section>
+    <!-- End Sample Area -->
+    <!-- End Button -->
+    <!-- Start Align Area -->
+    <div class="whole-wrap">
+      <div class="container">
+
+        <div class="section-top-border">
+          <h3 class="mb-30 title_color">Asosiy qoidalar</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="single-defination">
+                <h4 class="mb-20">Forma 01</h4>
+                <p>Bizning maktab-internatimiz o'quvchilari o'quvchilar uchun mo'ljalangan formalarda kelishadi . Bu o'g'il bollar uchun oq ko'ylak , qora shim , galstuk va qizlar uchun oq ko'fta , qora yubka , salqin havoda barcha o'quvchilar uchun qora kostyum. </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="single-defination">
+                <h4 class="mb-20">Dars mashhulotlari 02</h4>
+                <p>Dars mashhulotlari soat 8:00 dan boshlanadi har kuni 5-6 soat dars bo'ladi . Oraliq tanaffuslar 5 daqiqani, katta tanaffus 20 daqiqani tashkil etadi . Dars mashhulotlari 13:10 da tamom bo'ladi va to'garak mashhulotalari boshlanadi . </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="single-defination">
+                <h4 class="mb-20">To'garak mashhulotlari 03</h4>
+                <p>Maktab-internatda fanlar kesimida to'garakklar tashkil etilgan , har bir o'quvchi o'zi qiziqishi bo'yicha albatta 1 to'garakka azo bo'lishi shart . </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-top-border">
+          <h3 class="mb-30 title_color">Block Quotes</h3>
+          <div class="row">
+            <div class="col-lg-12">
+              <blockquote class="generic-blockquote">Maktab-internati o'quvchilar tuman , viloyat , respublika miqiyosida online va ofline tashkil etilgan tanlovlarda , fan olimpiadalarida ishtirok etishadi . Ushbu tadbirlar turli xil ijtimoiy saytlarda yortb boriladi . </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-top-border">
+          <h3 class="title_color">Image Gallery</h3>
+          <div class="row gallery-item">
+            <div class="col-md-4">
+              <a href="{% static 'img/28/garden.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/garden.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-4">
+              <a href="{% static 'img/28/stadium_out.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/stadium_out.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-4">
+              <a href="{% static 'img/28/stadium_in.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/stadium_in.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-6">
+              <a href="{% static 'img/28/school.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/school.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-6">
+              <a href="{% static 'img/28/school_2.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/school_2.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-4">
+              <a href="{% static 'img/28/class.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/class.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-4">
+              <a href="{% static 'img/28/class_2.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/28/class_2.jpg' %});"></div></a>
+            </div>
+            <div class="col-md-4">
+              <a href="{% static 'img/elements/g8.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url({% static 'img/elements/g8.jpg' %});"></div></a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- End Align Area -->
+
+
+{% endblock content %}

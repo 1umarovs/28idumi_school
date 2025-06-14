@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<title>{% block title %} news detail {% endblock title %}</title>
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+      <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="banner_content text-center">
+                <h2>{{object.title}}</h2>
+                <div class="page_link">
+                  <a href="{% url 'main:homePage' %}">Bosh sahifa</a>
+                  <a href="{% url 'main:News' %}">Yangiliklar</a>
+                  <a href="">{{object.title}}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 posts-list">
+                    <div class="single-post row">
+                        <div class="col-lg-12">
+                            <div class="feature-img">
+                                <img class="img-fluid w-100" src="{{object.img.url}}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-3  col-md-3">
+                            <div class="blog_info text-right">
+                                <div class="post_tag">
+                                    <a href="#">Yangilik,</a>
+                                    <a class="active" href="#">Maktab hayoti,</a>
+                                </div>
+                                <ul class="blog_meta list">
+                                    <li><a href="#">{{object.author}}<i class="ti-user"></i></a></li>
+                                    <li><a href="#">{{object.created_at|date:"d m Y"}}<i class="ti-calendar"></i></a></li>
+                                    <li><a href="#">{{c_count}} Comments<i class="ti-comment"></i></a></li>
+                                </ul>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
+                                    <li><a href="#"><i class="ti-twitter"></i></a></li>
+                                    <li><a href="#"><i class="ti-github"></i></a></li>
+                                    <li><a href="#"><i class="ti-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 blog_details">
+                            <h2>{{object.title}}</h2>
+                            <p class="excert">
+                              {{object.description}}
+                            </p>
+                        </div>
+                        <div class="col-lg-12 py-3">
+                            <div class="row">
+
+                            
+                            {% for images in other_img %}
+                            <div class="col-6">
+                                <img class="img-fluid p-3" src="{{images.image.url}}" alt="">
+                            </div>
+                            {% endfor %}
+                                
+
+                                <div class="col-lg-12 mt-25">
+                                    <p>
+                                        MCSE boot camps have its supporters and its detractors. Some people do not
+                                        understand why you should have to spend money on boot camp when you can get the
+                                        MCSE study materials yourself at a fraction of the camp price. However, who has
+                                        the willpower.
+                                    </p>
+                                    <p>
+                                        MCSE boot camps have its supporters and its detractors. Some people do not
+                                        understand why you should have to spend money on boot camp when you can get the
+                                        MCSE study materials yourself at a fraction of the camp price. However, who has
+                                        the willpower.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-area">
+                        <h4>{{c_count}} comments</h4>
+
+                        {% for comment in comments %}
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img src="{% static '' %}" alt="">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="#">{{comment.name}}</a></h5>
+                                        <p class="date">{{comment.created_at}}</p>
+                                        <p class="comment">
+                                            {{comment.message}}
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+                    <div class="comment-form">
+                        <h4>Leave a Reply</h4>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <textarea class="form-control mb-10 border" rows="10" minlength="3" name="message" placeholder="Enter Message" required></textarea>
+                            </div>
+                            <input type="submit" class="primary-btn">
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget search_widget">
+                                <div class="br"></div>
+                            </aside>
+                            <aside class="single_sidebar_widget author_widget">
+                                <img class="author_img rounded-circle" src="img/blog/author.png" alt="">
+                                <h4>{{object.author}}</h4>
+                                <p>Senior blog writer</p>
+                                <div class="social_icon">
+                                    <a href="#"><i class="ti-facebook"></i></a>
+                                    <a href="#"><i class="ti-twitter"></i></a>
+                                    <a href="#"><i class="ti-github"></i></a>
+                                    <a href="#"><i class="ti-linkedin"></i></a>
+                                </div>
+                                <p>Boot camps have its supporters andit sdetractors. Some people do not understand why you
+                                    should have to spend money on boot camp when you can get. Boot camps have itssuppor
+                                    ters andits detractors.</p>
+                                <div class="br"></div>
+                            </aside>
+                            <aside class="single_sidebar_widget popular_post_widget">
+                                <h3 class="widget_title">Popular Posts</h3>
+                                
+                                {% for post in other_post %}
+                                <div class="media post_item">
+                                    <img src="{{post.img.url}}" class="img-fluid" style="width: 100px;" alt="post">
+                                    <div class="media-body">
+                                        <a href="{% url 'main:newDetail' post.slug %}">
+                                            <h3>{{post.title}}</h3>
+                                        </a>
+                                        <p>{{post.created_at}}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+
+                                <div class="br"></div>
+                            </aside>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+{% endblock content %}

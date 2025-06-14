@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- ================Home Banner Area ================= -->
+  <section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="banner_content text-center">
+              <h2>Maktabimiz Kurslari</h2>
+              <div class="page_link">
+                <a href="{% url 'main:homePage' %}">Bosh sahifa</a>
+                <a href="{% url 'main:courses' %}">Maktabimiz Kurslari</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================End Home Banner Area ================= -->
+
+  <!-- ================ Start Popular Courses Area ================= -->
+  <div class="popular_courses section_gap_top">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="main_title">
+            <h2 class="mb-3">Bizning maktabimiz kurslari</h2>
+            <p>Replenish man have thing gathering lights yielding shall you</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- single course -->
+        <div class="col-lg-12">
+          <div class="owl-carousel active_course">
+            <div class="single_course">
+              <div class="course_head">
+                <img class="img-fluid" src="{% static 'img/courses/c1.jpg' %}" alt="" />
+              </div>
+              <div class="course_content">
+                <span class="price">$25</span>
+                <span class="tag mb-4 d-inline-block">design</span>
+                <h4 class="mb-3"><a href="course-details.html">Matematika</a></h4>
+                <p>One make creepeth man bearing their one firmament won't fowl meat over sea</p>
+              </div>
+            </div>
+
+            <div class="single_course">
+              <div class="course_head">
+                <img class="img-fluid" src="{% static 'img/courses/c2.jpg' %}" alt="" />
+              </div>
+              <div class="course_content">
+                <span class="price">$25</span>
+                <span class="tag mb-4 d-inline-block">design</span>
+                <h4 class="mb-3"><a href="course-details.html">Ingliz tili</a></h4>
+                <p>One make creepeth man bearing their one firmament won't fowl meat over sea</p>
+              </div>
+            </div>
+
+            <div class="single_course">
+              <div class="course_head">
+                <img class="img-fluid" src="{% static 'img/courses/c3.jpg' %}" alt="" />
+              </div>
+              <div class="course_content">
+                <span class="price">$25</span>
+                <span class="tag mb-4 d-inline-block">design</span>
+                <h4 class="mb-3"><a href="course-details.html">Kimyo</a></h4>
+                <p>One make creepeth man bearing their one firmament won't fowl meat over sea</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ================ End Popular Courses Area ================= -->
+
+  <!-- ================ Start Registration Area ================= -->
+  <div class="section_gap registration_area">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="row clock_sec clockdiv" id="clockdiv">
+            <div class="col-lg-12">
+              <h1 class="mb-3">Qabul uchun ro'yhatdan o'ting</h1>
+              <p>There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station.</p>
+            </div>
+            <div class="col clockinner1 clockinner">
+              <h1 class="days">150</h1>
+              <span class="smalltext">Days</span>
+            </div>
+            <div class="col clockinner clockinner1">
+              <h1 class="hours">23</h1>
+              <span class="smalltext">Hours</span>
+            </div>
+            <div class="col clockinner clockinner1">
+              <h1 class="minutes">47</h1>
+              <span class="smalltext">Mins</span>
+            </div>
+            <div class="col clockinner clockinner1">
+              <h1 class="seconds">59</h1>
+              <span class="smalltext">Secs</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1">
+          <div class="register_form">
+            <h3>Maktabga qabul qilish</h3>
+            <p>It is high time for learning</p>
+            <a href="{% url 'main:Contact' %}" class="primary-btn">Qabul qilish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ================ End Registration Area ================= -->
+
+  <!-- ================ Start Feature Area ================= -->
+  <section class="feature_area section_gap_top">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <div class="main_title">
+            <h2 class="mb-3">Awesome Feature</h2>
+            <p>
+              Replenish man have thing gathering lights yielding shall you
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="single_feature">
+            <div class="icon"><span class="flaticon-student"></span></div>
+            <div class="desc">
+              <h4 class="mt-3 mb-2">Scholarship Facility</h4>
+              <p>
+                Bizning o'quvchilarimizning har biri , har yili oliygohlarga kirishmoqda
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="single_feature">
+            <div class="icon"><span class="flaticon-book"></span></div>
+            <div class="desc">
+              <h4 class="mt-3 mb-2">Maktabimiz Fanlari</h4>
+              <p>
+                BIzning maktab-internatimiz matematika va Ingliz tili fanlariga ixtisoslashtirilgan
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="single_feature">
+            <div class="icon"><span class="flaticon-earth"></span></div>
+            <div class="desc">
+              <h4 class="mt-3 mb-2">Global Sertifikatlar</h4>
+              <p>
+                Ko‘plab o‘quvchilarimiz turli sertifikatlarga ega bo‘lmoqda
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================ End Feature Area ================= -->
+{% endblock %}
