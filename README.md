@@ -61,13 +61,13 @@ This is a custom **school website** developed for **School No. 28** in Andijan, 
 > Add these screenshots to your repository under `static/images/` and include them like this:
 
 ### 🏠 Home Page
-![Homepage](staticfiles/for_github/screenshot(65).png)
+![Homepage](staticfiles/for_github/Home.png)
 
-### 📰 News & Achievements
-![News](static/images/screenshot(66).png)
+### 📰 About Us
+![News](staticfiles/for_github/About.png)
 
 ### 👩‍🏫 Teacher Profiles & Comments
-![Teachers](static/images/screenshot(67).png)
+![Teachers](staticfiles/for_github/Teachers.png)
 
 ---
 
